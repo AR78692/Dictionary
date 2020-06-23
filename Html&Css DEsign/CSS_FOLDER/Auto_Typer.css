@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body{
+  padding: 40px;
+  background-color: #0000FF;  
+}
+
+p {
+  border-right: solid 5px rgb(0,0,255);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  color: rgb(0,0,255);
+}
+
+/* Animation */
+p {
+  animation: animated-text 4s linear 1s 1 normal both,
+             animated-cursor 1000ms linear infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 456px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgb(0,0,255)}
+  to{border-right-color: transparent;}
+}
